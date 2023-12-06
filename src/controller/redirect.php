@@ -4,4 +4,4 @@
 
 use Symfony\Component\HttpFoundation\Response;
 
-return new Response($twig->render('home.html.twig'));
+return new Response($twig->render('splashscreen.html.twig'));
