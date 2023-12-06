@@ -4,5 +4,7 @@
 
 use Symfony\Component\HttpFoundation\Response;
 
-return new Response($twig->render('home/home.html.twig'));
+$folder = 'assets/image/logo.jpg';
+
+return new Response($twig->render('splashscreen.html.twig', ['logo' => $folder]));
 
