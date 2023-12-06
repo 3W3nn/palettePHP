@@ -4,8 +4,7 @@
 
 use Symfony\Component\HttpFoundation\Response;
 
-
-require_once 'vendor/autoload.php'; // Inclure l'autoloader de Twig
+/*
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/inscription.html.twig');
 $twig = new \Twig\Environment($loader);
 
@@ -28,3 +27,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Affichez le formulaire d'inscription
 return new Response($twig->render('splashscreen.html.twig'));
+*/
+return new Response($twig->render('inscription.html.twig'));
