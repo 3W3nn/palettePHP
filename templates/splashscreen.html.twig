@@ -3,18 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>Palette</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Dsiplay">
+
+    <script>
+        // Attendez 3 secondes (3000 millisecondes), puis redirigez vers 'home.html'
+        setTimeout(function() {
+            window.location.href = '/home'; //
+        }, 3000);
+    </script>
+
+    <style>
+
+        /* Taille de base pour les écrans de taille moyenne */
+        .logo-container h1 {
+            font-size: 2.5rem; /* Taille de base */
+        }
+
+        /* Pour les écrans plus larges */
+        @media (min-width: 768px) {
+            .logo-container h1 {
+                font-size: 4rem; /* Plus grand sur les écrans larges */
+            }
+        }
+
+        /* Pour les petits écrans, comme les mobiles */
+        @media (max-width: 767px) {
+            .logo-container h1 {
+                font-size: 2rem; /* Plus petit sur les écrans mobiles */
+            }
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(to bottom, #745CFF 0%, #745CFF 20%, #fcbf9c 80%, #fcbf9c 100%);) fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+        .logo-container img {
+            width: 30vw; /* Adapté à 50% de la largeur de la vue */
+            max-width: 40vw; /* Pour éviter que l'image ne déborde */
+            margin-left: 20%; /* Marge à gauche */
+            margin-right: 20%; /* Marge à droite */
+            margin-top: 10%; /* Marge en haut */
+            margin-bottom: 10%; /* Marge en bas */
+        }
+        .splash-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* S'étend sur toute la hauteur de la fenêtre */
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        @keyframes rotate-animation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .logo-container img {
+            animation: rotate-animation 2s infinite linear;
+        }
+    </style>
 </head>
 <body>
 <div class="splash-container">
-        <div class="logo-container">
-            <div style="text-align: center;"><img src="/assets/image/logo.png" alt="Palette Logo"> </div>
-            <h1>Palette.</h1>
-        </div>
-
-
-
+    <div class="logo-container">
+        <img src="/assets/image/logo.png" alt="Palette Logo" >
+        <h1><span style="color: #7CCADF;">P</span
+            ><span style="color: #89BB62;">a</span>
+            <span style="color: #C3E364;">l</span>
+            <span style="color: #FFE070;">e</span>
+            <span style="color: #ECA661;">t</span>
+            <span style="color: #D16762;">t</span>
+            <span style="color: #BC81D9;">e</span>
+            <span style="color: blanchedalmond;">.</span>
+        </h1>
+    </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
