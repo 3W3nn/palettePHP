@@ -1,24 +1,140 @@
-<!-- inscription.html.twig -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(to bottom, #745CFF, #fcbf9c);
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            display: inline-block;
+            font-size: 4em;
+        }
+
+        /* Applique une couleur différente à chaque lettre */
+        h1 span:nth-child(1) {
+            color: #7CCADF;
+        }
+
+        h1 span:nth-child(2) {
+            color: #89BB62;
+        }
+
+        h1 span:nth-child(3) {
+            color: #C3E364;
+        }
+
+        h1 span:nth-child(4) {
+            color: #FFE070;
+        }
+
+        h1 span:nth-child(5) {
+            color: #ECA661;
+        }
+
+        h1 span:nth-child(6) {
+            color: #D16762;
+        }
+
+        h1 span:nth-child(7) {
+            color: #E999D5;
+        }
+
+        h1 span:nth-child(8) {
+            color: #BC81D9;
+        }
+
+        h1 span:nth-child(9) {
+            color: #8B78FB;
+        }
+
+        h1 span:nth-child(10) {
+            color: #94A6F0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            text-align: left;
+            color: bisque;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            background-color: bisque;
+
+        }
+
+        input[type="submit"] {
+            background-color: #D16762;
+            color: bisque;
+
+            cursor: pointer;
+            transition: background-color 0.3s; /* Ajout de l'animation de transition */
+            border: 8px solid;
+            border-image: repeating-linear-gradient(135deg, #FFE070 0 10px, #ECA661 0 20px, #D16762 0 30px) 8;
+            -webkit-mask: conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0)
+            var(--_i, 200%) 0 / 200% var(--_i, 8px) border-box no-repeat,
+            conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0)
+            0 var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
+            linear-gradient(#000 0 0) padding-box no-repeat;
+        }
+
+        input[type="submit"]:hover {
+            --_i: 100%;
+            color: #CC333F;
+            transition: .3s, -webkit-mask-size .3s .3s, background-color 0.3s;
+        }
+
+        input:not([type="submit"]) {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
-<h1>Inscription</h1>
-<form action="inscription.php" method="post">
-    <label for="nom">Nom:</label>
+<h1><span>I</span><span>n</span><span>s</span><span>c</span><span>r</span><span>i</span><span>p</span><span>t</span><span>i</span><span>o</span><span>n</span></h1>
+<form action="/checkup_inscription" method="post">
+    <label for="nom">Nom :</label>
     <input type="text" name="nom" required><br>
 
-    <label for="email">Email:</label>
+    <label for="prénom">Prenom :</label>
+    <input type="text" name="prénom" required><br>
+
+    <label for="email">Email :</label>
     <input type="email" name="email" required><br>
 
-    <label for="mot_de_passe">Mot de passe:</label>
+    <label for="mot_de_passe">Mot de passe :</label>
     <input type="password" name="mot_de_passe" required><br>
 
     <input type="submit" value="S'inscrire">
 </form>
 </body>
+
 </html>
