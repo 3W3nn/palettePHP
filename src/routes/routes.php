@@ -11,8 +11,9 @@ $routes->add('home', new Route('/'));
 return $routes;
 
 $routes->add('splashscreen', new Route('/splash'));
-$routes->add('redirect', new Route('/'));
+$routes->add('splashscreen', new Route(''));
 
+$routes->add('home', new Route('/'));
 $routes->add('home', new Route('/home'));
 
 return $routes;
