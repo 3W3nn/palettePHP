@@ -6,8 +6,9 @@ use Symfony\Component\Routing\RouteCollection;
 $routes = new RouteCollection();
 
 $routes->add('splashscreen', new Route('/splash'));
-$routes->add('redirect', new Route('/'));
+$routes->add('splashscreen', new Route(''));
 
+$routes->add('home', new Route('/'));
 $routes->add('home', new Route('/home'));
 
 return $routes;

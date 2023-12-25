@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Pour tout  //////////////////////////////////*/
+.text_style {
+    font-family: 'Playfair Display', serif;
+}
+
+.general_background {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(to bottom, #745CFF 0%, #745CFF 20%, #fcbf9c 80%, #fcbf9c 100%) fixed;
+        background-size: cover;
+}
+
+/* Pour les top bar //////////////////////////////////*/
+
+.top-bar {
+    background-color: transparent ; /* ou autre couleur de votre choix */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.top-bar-item img {
+    min-height: 24px; /* ou la taille que vous voulez */
+    cursor: pointer;
+}
+
+/* Overlay Menu //////////////////////////////////*/
+
+.overlay {
+    height: 100%;
+    width: 25%; /* Largeur initiale à 0 pour cacher l'overlay */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: linear-gradient(        /* Couleur de fond de l'overlay */
+            to bottom,
+            #7CCADF 3%,
+            #7CCADF 7%,
+            #89BB62 14%,
+            #89BB62 17%,
+            #C3E364 24%,
+            #C3E364 27%,
+            #FFE070 34%,
+            #FFE070 37%,
+            #ECA661 44%,
+            #ECA661 47%,
+            #D16762 54%,
+            #D16762 57%,
+            #E999D5 64%,
+            #E999D5 67%,
+            #BC81D9 74%,
+            #BC81D9 77%,
+            #8B78FB 84%,
+            #8B78FB 87%,
+            #94A6F0 94%
+    )
+    fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s; /* Animation de transition pour l'ouverture/fermeture */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.overlay-content {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    top: 3%; /* Centrage vertical du contenu */
+    width: 100%;
+    text-align: center;
+    color: #121212; /* Noir */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 20px; /* Taille de police plus grande */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 9.8%;
+}
+
+.overlay-content a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol, si souhaité */
+}
+
+/* Style pour le lien qui ferme l'overlay */
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.zone-cliquable {
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    width: 75%; /* Ou la largeur que vous souhaitez */
+    height: 100%;
+    z-index: 100;
+}
+
