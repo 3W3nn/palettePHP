@@ -1,0 +1,65 @@
+/* Overlay Menu //////////////////////////////////*/
+
+.overlay {
+    height: 100%;
+    width: 0%; /* Largeur initiale à 0 pour cacher l'overlay */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: linear-gradient(        /* Couleur de fond de l'overlay */
+            to bottom,
+            #7CCADF 3%,
+            #7CCADF 7%,
+            #89BB62 14%,
+            #89BB62 17%,
+            #C3E364 24%,
+            #C3E364 27%,
+            #FFE070 34%,
+            #FFE070 37%,
+            #ECA661 44%,
+            #ECA661 47%,
+            #D16762 54%,
+            #D16762 57%,
+            #E999D5 64%,
+            #E999D5 67%,
+            #BC81D9 74%,
+            #BC81D9 77%,
+            #8B78FB 84%,
+            #8B78FB 87%,
+            #94A6F0 94%
+    )
+    fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s; /* Animation de transition pour l'ouverture/fermeture */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+.overlay-content {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    text-align: center;
+    color: #121212; /* Noir */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 20px; /* Taille de police plus grande */
+    line-height: 3.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay-content:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol, si souhaité */
+}
+.zone-cliquable {
+    position: fixed;
+    top: 0;
+    left: 25%;
+    width: 100%; /* Couvre toute la largeur */
+    height: 100%; /* Couvre toute la hauteur */
+    display: none; /* Cachée par défaut */
+}
+
+.zone_sombre {}
