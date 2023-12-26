@@ -27,3 +27,24 @@ window.addEventListener('click', function(event) {
     }
 })
 
+
+function toggleBackground(event) {
+    var element = event.currentTarget;
+    var isActive = element.classList.contains('active'); // Vérifie si la classe 'active' est présente
+
+    if (isActive) {
+        // Si actif, rendre transparent
+        element.style.backgroundColor = 'transparent';
+        element.style.border = 'transparent';
+        element.classList.remove('active'); // Retire la classe 'active'
+    } else {
+        // Si inactif, appliquer la couleur
+        element.style.backgroundColor = 'rgba(250, 250, 250, 0.3)'; // Mettez votre couleur de fond ici
+        element.classList.add('active'); // Ajoute la classe 'active'
+    }
+}
+
+document.querySelectorAll('.favorite_on_overlay_content').forEach(function(element) {
+    element.classList.add('active'); // Ajoute 'active' au départ
+    element.addEventListener('click', toggleBackground);
+});
