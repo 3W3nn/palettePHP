@@ -1,6 +1,6 @@
 /* Overlay Menu //////////////////////////////////*/
 
-.overlay {
+.menu_overlay {
     height: 100%;
     width: 0%; /* Largeur initiale à 0 pour cacher l'overlay */
     position: fixed;
@@ -33,12 +33,12 @@
     overflow-x: hidden;
     overflow-y: hidden;
     transition: 0.5s; /* Animation de transition pour l'ouverture/fermeture */
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 
 }
 
-.overlay-content {
+.menu_overlay_content {
     font-family: 'Playfair Display', serif;
     position: relative;
     text-align: center;
@@ -50,10 +50,10 @@
     flex-direction: column;
 }
 
-.overlay-content:hover {
+.menu_overlay_content:hover {
     text-decoration: underline; /* Ajoute un soulignement au survol, si souhaité */
 }
-.zone-cliquable {
+.menu_zone_cliquable {
     position: fixed;
     top: 0;
     left: 25%;

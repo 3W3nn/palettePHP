@@ -1,6 +1,6 @@
 
     // Fonction pour ouvrir le menu overlay
-    function openNav() {
+    function openNavMenu() {
         var overlay = document.getElementById("ov_menu");
         var zoneCliquable = document.getElementById("zoneCliquable");
         overlay.style.width = "25%";
@@ -10,7 +10,7 @@
 
 
     // Fonction pour fermer le menu overlay
-    function closeNav() {
+    function closeNavMenu() {
         var overlay = document.getElementById("ov_menu");
         var zoneCliquable = document.getElementById("zoneCliquable");
         overlay.style.width = "0";
@@ -22,11 +22,11 @@
     window.addEventListener('click', function(event) {
     //var overlay = document.getElementById("ov_menu");
     var zoneCliquable = document.getElementById('zoneCliquable');
-    var overlay_content = document.querySelector('.overlay-content');
+    var overlay_content = document.querySelector('.menu_overlay_content');
     //var menu  = document.getElementById('zoneCliquable');
     // Vérifie si le clic était sur l'overlay (mais pas sur son contenu)
         if (event.target === zoneCliquable) {
-            closeNav();
+            closeNavMenu();
         }
 
 });
