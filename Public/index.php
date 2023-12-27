@@ -14,20 +14,6 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 $request = Request::createFromGlobals();
 
-$routes = require_once dirname(__DIR__) . '/src/Routes/routes.php';
-
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Exception\ResourceNotFoundException;
-use Symfony\Component\Routing\Matcher\UrlMatcher;
-use Symfony\Component\Routing\RequestContext;
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$request = Request::createFromGlobals();
-
 $routes = require_once dirname(__DIR__) . '/src/routes/routes.php';
 
 
@@ -40,9 +26,6 @@ $loader = new FilesystemLoader(dirname(__DIR__) . '/templates');
 $twig = new Environment($loader, [
     'cache' => false,
 ]);
-
-
-
 
 
 try {

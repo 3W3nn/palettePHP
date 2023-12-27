@@ -1,8 +1,8 @@
 /* Overlay Menu //////////////////////////////////*/
 
-.overlay {
+.menu_overlay {
     height: 100%;
-    width: 0%; /* Largeur initiale à 0 pour cacher l'overlay */
+    width: 25%; /* Largeur initiale à 0 pour cacher l'overlay */
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -33,27 +33,86 @@
     overflow-x: hidden;
     overflow-y: hidden;
     transition: 0.5s; /* Animation de transition pour l'ouverture/fermeture */
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 
 }
+.container{
+    width: 80%;                     /* ou la largeur que vous préférez */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3vh;               /* 5% de la hauteur de la fenêtre de visualisation */
+    padding-bottom: 3vh;            /* 5% de la hauteur de la fenêtre de visualisation */
+    background-color: #f0f0f0;      /* ou toute autre couleur de fond */
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 2vh; /* Espacement vertical entre les éléments */
+}
 
-.overlay-content {
+.menu_overlay_content {
     font-family: 'Playfair Display', serif;
+    font-size: 30px;                /* Taille de police plus grande */
     position: relative;
     text-align: center;
-    color: #121212; /* Noir */
-    text-decoration: none; /* Pas de soulignement */
-    font-size: 20px; /* Taille de police plus grande */
-    line-height: 3.5;
+    color: #121212;                 /* Noir */
+    text-decoration: none;          /* Pas de soulignement */
     display: flex;
     flex-direction: column;
 }
 
-.overlay-content:hover {
-    text-decoration: underline; /* Ajoute un soulignement au survol, si souhaité */
+
+/* Pour les écrans mobiles plus petits */
+@media (max-width: 480px) {
+    .menu_overlay {
+        width: 75%; /* Plus large sur les petits écrans */
+    }
 }
-.zone-cliquable {
+
+/* Media queries pour les écrans plus larges */
+@media (min-width: 768px) {
+    .menu_overlay_content {
+        /* Ajustement de l'espacement pour les écrans plus larges */
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        /* Ajustement de la taille de police */
+        font-size: 1.2rem; /* Taille de police légèrement plus grande */
+    }
+}
+
+/* Media queries pour les écrans très larges */
+@media (min-width: 1024px) {
+    .menu_overlay_content {
+        /* Ajustement de l'espacement pour les écrans très larges */
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        /* Ajustement de la taille de police */
+        font-size: 1.4rem; /* Taille de police encore plus grande */
+    }
+}
+
+/* Media queries pour les écrans plus petits (mobiles) */
+@media (max-width: 350px) {
+    .menu_overlay {
+        width: 75%; /* Plus large sur les petits écrans */
+    }
+
+    .menu_overlay_content {
+        /* Ajustement de l'espacement pour les écrans mobiles */
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+
+        /* Ajustement de la taille de police */
+        font-size: 0.9rem; /* Taille de police plus petite pour l'espace limité */
+    }
+}
+
+.menu_overlay_content:hover {
+    text-decoration: underline;     /* Ajoute un soulignement au survol, si souhaité */
+}
+
+.menu_zone_cliquable {
     position: fixed;
     top: 0;
     left: 25%;
