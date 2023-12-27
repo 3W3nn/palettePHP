@@ -26,11 +26,6 @@ $twig = new Environment($loader, [
     'cache' => false,
 ]);
 
-
-
-
-
-
 try {
     extract($urlMatcher->match($request->getPathInfo()));
 

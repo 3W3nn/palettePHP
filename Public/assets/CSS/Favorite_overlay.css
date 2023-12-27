@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     z-index: 10000;
-    background-color: rgba(128, 128, 128, 0.9);
+    background-color: rgba(128, 128, 128, 0.97);
     overflow-x: hidden;
     overflow-y: hidden;
     transition: 0.5s; /* Animation de transition pour l'ouverture/fermeture */
@@ -29,7 +29,7 @@
 
 .favorite_on_overlay_content{
     border: transparent; /* Bordure rouge */
-    background-color: rgba(250, 250, 250, 0.3);
+    background-color: rgba(250, 250, 250, 0.7);
     border-radius: 35px;
     padding: 0px 15px;
     margin: 1px ; /* Espacement autour de la box */
