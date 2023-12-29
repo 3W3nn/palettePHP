@@ -8,11 +8,11 @@ $routes = new RouteCollection();
 
 $routes->add('home', new Route('/'));
 
-return $routes;
-
 $routes->add('splashscreen', new Route('/splash'));
 $routes->add('splashscreen', new Route(''));
-
+$routes->add('inscription', new Route('/inscription'));
+$routes->add('checkup_inscription', new Route('/checkup_inscription'));
+$routes->add('splashscreen', new Route(''));
 $routes->add('home', new Route('/'));
 $routes->add('home', new Route('/home'));
 
