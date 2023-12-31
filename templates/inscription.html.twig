@@ -120,12 +120,12 @@
 
 <body>
 <h1><span>I</span><span>n</span><span>s</span><span>c</span><span>r</span><span>i</span><span>p</span><span>t</span><span>i</span><span>o</span><span>n</span></h1>
-<form action="/checkup_inscription" method="post">
+<form method="POST" action="traitement_inscription.php">
     <label for="nom">Nom :</label>
     <input type="text" name="nom" required><br>
 
-    <label for="prénom">Prenom :</label>
-    <input type="text" name="prénom" required><br>
+    <label for="prenom">Prenom :</label>
+    <input type="text" name="prenom" required><br>
 
     <label for="email">Email :</label>
     <input type="email" name="email" required><br>
@@ -133,7 +133,7 @@
     <label for="mot_de_passe">Mot de passe :</label>
     <input type="password" name="mot_de_passe" required><br>
 
-    <input type="submit" value="S'inscrire">
+    <input type="submit" value="ok">
 </form>
 </body>
 
