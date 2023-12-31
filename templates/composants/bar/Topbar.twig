@@ -12,8 +12,13 @@
         <!-- autres liens -->
         {% include 'composants/overlay/favorite_overlay.twig' %}
 
-        <a href="/message" class="top-bar-item">
+        <a href="javascript:void(0)" class="top-bar-item" onclick="change_page()">
             <img src="/assets/image/SVG/topbar/message.svg" alt="Messages">
+
+
+            <script src="assets/JS/post_liked.js"></script>
         </a>
+
+
     </nav>
 {% endblock %}
