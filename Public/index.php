@@ -1,7 +1,5 @@
 <?php
 
-
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
@@ -26,6 +24,10 @@ $loader = new FilesystemLoader(dirname(__DIR__) . '/templates');
 $twig = new Environment($loader, [
     'cache' => false,
 ]);
+
+
+
+$entityManager = require_once dirname(__DIR__) . '/config/config.php';
 
 
 try {

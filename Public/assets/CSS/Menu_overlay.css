@@ -1,124 +1,150 @@
-/* Overlay Menu //////////////////////////////////*/
-
+/* Styles généraux de l'overlay */
 .menu_overlay {
-    height: 100%;
-    width: 25%; /* Largeur initiale à 0 pour cacher l'overlay */
+    height: 100vh;
+    width: 0; /* Largeur initiale à 0 pour cacher l'overlay */
     position: fixed;
-    z-index: 1000;
     top: 0;
     left: 0;
-    background: linear-gradient(        /* Couleur de fond de l'overlay */
+    background: linear-gradient(
             to bottom,
-            #7CCADF 3%,
-            #7CCADF 7%,
-            #89BB62 14%,
-            #89BB62 17%,
-            #C3E364 24%,
-            #C3E364 27%,
-            #FFE070 34%,
-            #FFE070 37%,
-            #ECA661 44%,
-            #ECA661 47%,
-            #D16762 54%,
-            #D16762 57%,
-            #E999D5 64%,
-            #E999D5 67%,
-            #BC81D9 74%,
-            #BC81D9 77%,
-            #8B78FB 84%,
-            #8B78FB 87%,
-            #94A6F0 94%
-    )
-    fixed;
+            #7CCADF 3vh,
+            #7CCADF 7vh,
+            #89BB62 14vh,
+            #89BB62 17vh,
+            #C3E364 24vh,
+            #C3E364 27vh,
+            #FFE070 34vh,
+            #FFE070 37vh,
+            #ECA661 44vh,
+            #ECA661 47vh,
+            #D16762 54vh,
+            #D16762 57vh,
+            #E999D5 64vh,
+            #E999D5 67vh,
+            #BC81D9 74vh,
+            #BC81D9 77vh,
+            #8B78FB 84vh,
+            #8B78FB 87vh,
+            #94A6F0 94vh
+    );
     overflow-x: hidden;
     overflow-y: hidden;
-    transition: 0.5s; /* Animation de transition pour l'ouverture/fermeture */
+    transition: width 0.5s; /* Animation de transition pour l'ouverture/fermeture */
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-
 }
-.container{
-    width: 80%;                     /* ou la largeur que vous préférez */
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 3vh;               /* 5% de la hauteur de la fenêtre de visualisation */
-    padding-bottom: 3vh;            /* 5% de la hauteur de la fenêtre de visualisation */
-    background-color: #f0f0f0;      /* ou toute autre couleur de fond */
-    border-radius: 10px;
+
+/* Quand l'overlay est ouvert */
+.menu_overlay.open {
+    width: 0;
+    position: fixed;
+    top : 0;
+    left : 0;
+    overflow-y: hidden;
+}
+
+/* Conteneur pour le contenu de l'overlay */
+.container {
     display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne */
     grid-gap: 2vh; /* Espacement vertical entre les éléments */
+    padding: 2vh 0; /* Padding vertical */
 }
 
+/* Styles pour le contenu de l'overlay */
 .menu_overlay_content {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;                /* Taille de police plus grande */
-    position: relative;
+    font-size: 30px; /* Taille de police plus grande */
     text-align: center;
-    color: #121212;                 /* Noir */
-    text-decoration: none;          /* Pas de soulignement */
+    color: #222222; /* Noir */
+    text-decoration: none; /* Pas de soulignement */
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Centrer le contenu verticalement */
 }
 
-
-/* Pour les écrans mobiles plus petits */
-@media (max-width: 480px) {
-    .menu_overlay {
-        width: 75%; /* Plus large sur les petits écrans */
-    }
-}
-
-/* Media queries pour les écrans plus larges */
-@media (min-width: 768px) {
-    .menu_overlay_content {
-        /* Ajustement de l'espacement pour les écrans plus larges */
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-
-        /* Ajustement de la taille de police */
-        font-size: 1.2rem; /* Taille de police légèrement plus grande */
-    }
-}
-
-/* Media queries pour les écrans très larges */
-@media (min-width: 1024px) {
-    .menu_overlay_content {
-        /* Ajustement de l'espacement pour les écrans très larges */
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-
-        /* Ajustement de la taille de police */
-        font-size: 1.4rem; /* Taille de police encore plus grande */
-    }
-}
-
-/* Media queries pour les écrans plus petits (mobiles) */
-@media (max-width: 350px) {
-    .menu_overlay {
-        width: 75%; /* Plus large sur les petits écrans */
-    }
-
-    .menu_overlay_content {
-        /* Ajustement de l'espacement pour les écrans mobiles */
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
-
-        /* Ajustement de la taille de police */
-        font-size: 0.9rem; /* Taille de police plus petite pour l'espace limité */
-    }
-}
-
-.menu_overlay_content:hover {
-    text-decoration: underline;     /* Ajoute un soulignement au survol, si souhaité */
-}
-
+/* Zone cliquable pour fermer l'overlay */
 .menu_zone_cliquable {
     position: fixed;
     top: 0;
     left: 25%;
-    width: 100%; /* Couvre toute la largeur */
-    height: 100%; /* Couvre toute la hauteur */
+    width: 75%; /* Couvre la partie restante de l'écran */
+    height: 100%;
     display: none; /* Cachée par défaut */
+    /*background-color: #89BB62;*/
 }
 
-.zone_sombre {}
+/* Afficher la zone cliquable quand l'overlay est ouvert */
+.menu_zone_cliquable.show {
+    display: block;
+}
+
+
+/* Media queries pour ajuster la largeur de l'overlay sur les petits écrans */
+@media (max-width: 350px) {
+    .menu_overlay.open {
+        width: 60%; /* Plus large sur les petits écrans */
+    }
+    .menu_overlay_content{
+        font-size: 1.4rem;
+        font-weight: inherit ;
+    }
+    .menu_zone_cliquable {
+        left: 60%;  /* Ajuster la position de la zone cliquable */
+        width: 40%; /* Ajuster la largeur  de la zone cliquable */
+    }
+
+    .menu_overlay_content:hover {
+        text-decoration: underline; /* Ajoute un soulignement au survol, si souhaité */
+    }
+    .container{
+        grid-gap: 2.2rem;/* Espacement vertical entre les éléments */
+    }
+}
+
+/* Media queries pour les écrans moyens */
+@media (min-width: 351px) and (max-width: 768px) {
+    .menu_overlay.open {
+        width: 32vh;
+    }
+
+    .menu_zone_cliquable {
+        left: 32vh; /* Ajuster la position de la zone cliquable */
+        width: 68vh; /* Ajuster la largeur de la zone cliquable */
+    }
+
+    .menu_overlay_content{
+        font-size: 1.2rem;
+        font-weight: inherit ;
+    }
+
+    .container{
+        grid-gap: 2.2rem;/* Espacement vertical entre les éléments */
+    }
+
+    .menu_overlay_content:hover {
+        text-decoration: underline; /* Ajoute un soulignement au survol, si souhaité */
+    }
+}
+
+/* Media queries pour les écrans larges */
+@media (min-width: 769px) {
+    .menu_overlay.open {
+        width: 25%; /* Restaurer la largeur originale pour les grands écrans */
+    }
+    .menu_zone_cliquable {
+        left: 25%; /* Restaurer la position originale de la zone cliquable */
+        width: 75%; /* Restaurer la largeur originale de la zone cliquable */
+    }
+    .menu_overlay_content:hover {
+        text-decoration: underline; /* Ajoute un soulignement au survol, si souhaité */
+    }
+    .menu_overlay_content{
+        font-size: 1rem;
+        font-weight: inherit ;
+    }
+    .container{
+        grid-gap: 1.4rem;/* Espacement vertical entre les éléments */
+    }
+}
+

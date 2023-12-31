@@ -1,12 +1,21 @@
 {% extends 'composants/base.twig' %}
 
 {% block content %}
+
     <!-- Contenu spécifique à la page d'accueil -->
     <head>
-
+        <link rel="stylesheet" href="assets/CSS/style.css">
     </head>
     <body class="{% block body_class %}general_background{% endblock %}">
 
+
+
+    <div>
+        {% include 'composants/card.twig' %}
+    </div>
+    <div>
+        {% include 'composants/card.twig' %}
+    </div>
     <div>
         {% include 'composants/card.twig' %}
     </div>
@@ -16,6 +25,6 @@
 
 
     </body>
-    <p class ='text_style'>Bienvenue sur notre site web !</p>
+
     <!-- Autres éléments de la page d'accueil ici -->
 {% endblock %}
