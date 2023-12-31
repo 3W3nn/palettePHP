@@ -1,12 +1,11 @@
 /* Overlay Favorite //////////////////////////////////*/
 
 .favorite_overlay {
-    height: 0%; /* Hauteur initiale à 0 pour cacher l'overlay */
+    height: 0; /* Hauteur initiale à 0 pour cacher l'overlay */
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10000;
     background-color: rgba(128, 128, 128, 0.97);
     overflow-x: hidden;
     overflow-y: hidden;
@@ -14,6 +13,13 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+
+/* Quand l'overlay est ouvert */
+.favorite_overlay.open {
+    height: 0; /* Prend toute la hauteur de l'écran */
+    overflow-y: hidden;
+}
+
 
 .favorite_overlay_content {
     font-family: 'Playfair Display', serif;
@@ -32,11 +38,12 @@
     background-color: rgba(250, 250, 250, 0.7);
     border-radius: 35px;
     padding: 0px 15px;
-    margin: 1px ; /* Espacement autour de la box */
+    margin: 7px ; /* Espacement autour de la box */
 }
 
 .conteneur{
     text-align: center;
+
 }
 
 
@@ -50,4 +57,76 @@
     width: 100%; /* Couvre toute la largeur */
     height: 20%; /* Couvre toute la hauteur */
     display: none; /* Cachée par défaut */
+    /*background-color: #89BB62;*/
+}
+
+/* Afficher la zone cliquable quand l'overlay est ouvert */
+.menu_zone_cliquable.show {
+    display: block;
+}
+
+/* Media queries pour ajuster la largeur de l'overlay sur les petits écrans */
+@media (max-width: 350px) {
+    .favorite_overlay_content {
+        font-size: 16px; /* Légèrement plus petite sur les écrans moyens */
+    }
+    .favorite_overlay.open {
+        height: 90%; /* Plus haut sur les petits écrans */
+    }
+    .favorite_zone_cliquable {
+        top: 90%;  /* Ajuster la position de la zone cliquable */
+        height: 10%; /* Ajuster la largeur  de la zone cliquable */
+    }
+    .favorite_on_overlay_content{
+        margin: 1%;
+    }
+
+}
+
+@media (min-width: 351px) and (max-width: 400px) {
+    .favorite_overlay_content {
+        font-size: 18px; /* Légèrement plus petite sur les écrans moyens */
+    }
+    .favorite_overlay.open {
+        height: 80%; /* Plus large sur les petits écrans */
+    }
+    .favorite_zone_cliquable {
+        top: 80%;  /* Ajuster la position de la zone cliquable */
+        height: 20%; /* Ajuster la largeur  de la zone cliquable */
+    }
+    .favorite_on_overlay_content{
+        margin: 1%;
+    }
+
+}
+@media (min-width: 401px) and (max-width: 768px) {
+    .favorite_overlay_content {
+        font-size: 1.4rem; /* Légèrement plus petite sur les écrans moyens */
+    }
+    .favorite_overlay.open {
+        height: 70%; /* Plus large sur les petits écrans */
+    }
+    .favorite_zone_cliquable {
+        top: 70%;  /* Ajuster la position de la zone cliquable */
+        height: 30%; /* Ajuster la largeur  de la zone cliquable */
+    }
+    .favorite_on_overlay_content{
+         margin: 1%;
+     }
+
+}
+@media (min-width: 769px) {
+    .favorite_overlay_content {
+        font-size: 0.8rem; /* Plus grande sur les grands écrans */
+    }
+    .favorite_overlay.open {
+        height: 80%; /* Plus large sur les petits écrans */
+    }
+    .favorite_zone_cliquable {
+        top: 80%;  /* Ajuster la position de la zone cliquable */
+        height: 30%; /* Ajuster la largeur  de la zone cliquable */
+    }
+    .favorite_on_overlay_content{
+        margin: 0.2%;
+    }
 }

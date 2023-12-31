@@ -12,20 +12,8 @@
         background-size: cover;
 }
 
-/* Pour les top bar //////////////////////////////////*/
-
-.top-bar {
-    background-color: transparent ; /* ou autre couleur de votre choix */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.top-bar-item img {
-    min-height: 24px; /* ou la taille que vous voulez */
-    cursor: pointer;
+.body-content{
+    padding-top: 10%;
 }
 
 

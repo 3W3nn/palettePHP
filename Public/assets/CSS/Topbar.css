@@ -1,0 +1,18 @@
+.top-bar {
+    background-color:  #745CFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width:100%;
+    position: fixed;
+    z-index: 10;
+}
+
+.top-bar-item img {
+    height: 24px; /* Hauteur initiale de l'image */
+    width: auto; /* Garde le ratio d'aspect de l'image */
+    cursor: pointer;
+}
+

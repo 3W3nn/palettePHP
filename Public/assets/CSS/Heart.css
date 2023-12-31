@@ -1,0 +1,14 @@
+
+/* Style par défaut pour le cœur (noir) */
+.like-button {
+    color: black;
+    font-size: 24px; /* Ajuster la taille  */
+    cursor: pointer; /* Change le curseur  */
+    background: none;
+    border: none;
+}
+
+.like-button.red {
+    color: red;
+}
+
